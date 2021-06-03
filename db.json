@@ -1,0 +1,244 @@
+{
+  "catalog": [
+    {
+      "_id": "60b7d25ae96e1dd509c11909",
+      "name": "Bizmatic",
+      "logo": "https://via.placeholder.com/100",
+      "price": 45
+    },
+    {
+      "_id": "60b7d25ae5051931a4b1b1d2",
+      "name": "Interodeo",
+      "logo": "https://via.placeholder.com/100",
+      "price": 45
+    },
+    {
+      "_id": "60b7d25ada8c0f89701426f8",
+      "name": "Perkle",
+      "logo": "https://via.placeholder.com/100",
+      "price": 42
+    },
+    {
+      "_id": "60b7d25a850e437314ba4e12",
+      "name": "Digigen",
+      "logo": "https://via.placeholder.com/100",
+      "price": 14
+    },
+    {
+      "_id": "60b7d25abde3e33f7e753cc1",
+      "name": "Aclima",
+      "logo": "https://via.placeholder.com/100",
+      "price": 16
+    },
+    {
+      "_id": "60b7d25a9881e0ef44742cff",
+      "name": "Keeg",
+      "logo": "https://via.placeholder.com/100",
+      "price": 30
+    },
+    {
+      "_id": "60b7d25a0c6bc4cdc7b6dd41",
+      "name": "Amtas",
+      "logo": "https://via.placeholder.com/100",
+      "price": 19
+    },
+    {
+      "_id": "60b7d25abb47c27f0cf5118f",
+      "name": "Pearlessa",
+      "logo": "https://via.placeholder.com/100",
+      "price": 15
+    },
+    {
+      "_id": "60b7d25ad085f75c8d5b793a",
+      "name": "Accupharm",
+      "logo": "https://via.placeholder.com/100",
+      "price": 35
+    },
+    {
+      "_id": "60b7d25a47d06ab97588cf5a",
+      "name": "Fangold",
+      "logo": "https://via.placeholder.com/100",
+      "price": 13
+    },
+    {
+      "_id": "60b7d25a3830dffb223c32f6",
+      "name": "Applideck",
+      "logo": "https://via.placeholder.com/100",
+      "price": 14
+    },
+    {
+      "_id": "60b7d25a03e9c89aab6f135f",
+      "name": "Fortean",
+      "logo": "https://via.placeholder.com/100",
+      "price": 29
+    },
+    {
+      "_id": "60b7d25a19f3a3b03a7de314",
+      "name": "Trollery",
+      "logo": "https://via.placeholder.com/100",
+      "price": 13
+    },
+    {
+      "_id": "60b7d25a2abf4ac9e97a6e50",
+      "name": "Geekol",
+      "logo": "https://via.placeholder.com/100",
+      "price": 19
+    },
+    {
+      "_id": "60b7d25aa98f2157023bcf29",
+      "name": "Tingles",
+      "logo": "https://via.placeholder.com/100",
+      "price": 34
+    },
+    {
+      "_id": "60b7d25a3b289d128fc5a2ad",
+      "name": "Zosis",
+      "logo": "https://via.placeholder.com/100",
+      "price": 44
+    },
+    {
+      "_id": "60b7d25ae5cbdf5e3c43a6be",
+      "name": "Geekko",
+      "logo": "https://via.placeholder.com/100",
+      "price": 13
+    },
+    {
+      "_id": "60b7d25a64276aa5615b8524",
+      "name": "Frenex",
+      "logo": "https://via.placeholder.com/100",
+      "price": 18
+    },
+    {
+      "_id": "60b7d25a60d9860cb3b34000",
+      "name": "Rodeocean",
+      "logo": "https://via.placeholder.com/100",
+      "price": 37
+    },
+    {
+      "_id": "60b7d25ae779eedb76a6e8b1",
+      "name": "Gogol",
+      "logo": "https://via.placeholder.com/100",
+      "price": 13
+    },
+    {
+      "_id": "60b7d25a5391cec40ba6ae4a",
+      "name": "Thredz",
+      "logo": "https://via.placeholder.com/100",
+      "price": 46
+    },
+    {
+      "_id": "60b7d25a81a768e4cb9b5c1c",
+      "name": "Orbaxter",
+      "logo": "https://via.placeholder.com/100",
+      "price": 40
+    },
+    {
+      "_id": "60b7d25aac2d28133f7ac88d",
+      "name": "Satiance",
+      "logo": "https://via.placeholder.com/100",
+      "price": 49
+    },
+    {
+      "_id": "60b7d25a8df5e7db3fe75aa7",
+      "name": "Octocore",
+      "logo": "https://via.placeholder.com/100",
+      "price": 28
+    },
+    {
+      "_id": "60b7d25a884f428e47824175",
+      "name": "Zensus",
+      "logo": "https://via.placeholder.com/100",
+      "price": 36
+    },
+    {
+      "_id": "60b7d25a0dbbad60fa0e5f74",
+      "name": "Opportech",
+      "logo": "https://via.placeholder.com/100",
+      "price": 38
+    },
+    {
+      "_id": "60b7d25a4610d61b1b5e1c87",
+      "name": "Wrapture",
+      "logo": "https://via.placeholder.com/100",
+      "price": 16
+    },
+    {
+      "_id": "60b7d25a889e4901f7b6f00a",
+      "name": "Medalert",
+      "logo": "https://via.placeholder.com/100",
+      "price": 25
+    },
+    {
+      "_id": "60b7d25ad38d51eb0f303c32",
+      "name": "Quarx",
+      "logo": "https://via.placeholder.com/100",
+      "price": 22
+    },
+    {
+      "_id": "60b7d25a4717e532a53b5228",
+      "name": "Housedown",
+      "logo": "https://via.placeholder.com/100",
+      "price": 32
+    },
+    {
+      "_id": "60b7d25aed3384e8cdd7a897",
+      "name": "Snowpoke",
+      "logo": "https://via.placeholder.com/100",
+      "price": 38
+    },
+    {
+      "_id": "60b7d25ad7768a11b6b3d4c9",
+      "name": "Multiflex",
+      "logo": "https://via.placeholder.com/100",
+      "price": 36
+    },
+    {
+      "_id": "60b7d25af1ec51e54868e4d6",
+      "name": "Mondicil",
+      "logo": "https://via.placeholder.com/100",
+      "price": 15
+    },
+    {
+      "_id": "60b7d25ad18462880d54216f",
+      "name": "Goko",
+      "logo": "https://via.placeholder.com/100",
+      "price": 12
+    },
+    {
+      "_id": "60b7d25a070b484fd11f0511",
+      "name": "Comtent",
+      "logo": "https://via.placeholder.com/100",
+      "price": 35
+    },
+    {
+      "_id": "60b7d25a49c83268949b577a",
+      "name": "Obones",
+      "logo": "https://via.placeholder.com/100",
+      "price": 34
+    },
+    {
+      "_id": "60b7d25ad71f7b1e35412399",
+      "name": "Isologics",
+      "logo": "https://via.placeholder.com/100",
+      "price": 14
+    },
+    {
+      "_id": "60b7d25a1e3a85b119d83297",
+      "name": "Tropolis",
+      "logo": "https://via.placeholder.com/100",
+      "price": 43
+    },
+    {
+      "_id": "60b7d25a46505d44fed40663",
+      "name": "Squish",
+      "logo": "https://via.placeholder.com/100",
+      "price": 44
+    },
+    {
+      "_id": "60b7d25aee080c286910a0ee",
+      "name": "Jimbies",
+      "logo": "https://via.placeholder.com/100",
+      "price": 32
+    }
+  ]
+}
