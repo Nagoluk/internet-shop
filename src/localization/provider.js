@@ -7,6 +7,7 @@ import messages from './messages/index'
 const LangProvider = ({children, locale = Locales.ENGLISH}) => {
     return <IntlProvider
         locale={locale}
+        defaultLocale={Locales.ENGLISH}
         textComponent={Fragment}
         messages={messages[locale]}
     >
