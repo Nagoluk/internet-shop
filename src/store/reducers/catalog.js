@@ -1,27 +1,22 @@
 import {CatalogAPI} from '../../api/catalog-api';
+import {fromJS} from 'immutable';
 
 const SET_CATALOG = 'SET_CATALOG'
 const SET_IS_CATALOG_FETCHING = 'SET_IS_CATALOG_FETCHING'
 
-const initState = {
+const initState = fromJS({
     items: [],
     isCatalogFetching: false,
-}
+})
 
 
 const catalogReducer = (state = initState, action) =>{
     switch(action.type){
         case SET_CATALOG:
-            return {
-                ...state,
-                items: [...action.payload.catalog],
-            }
+            return state.update('items', () => action.payload.catalog)
 
         case SET_IS_CATALOG_FETCHING:
-            return {
-                ...state,
-                isCatalogFetching: action.payload
-            }
+            return state.update('isCatalogFetching', () => action.payload)
 
         default: return state
 
@@ -37,7 +32,7 @@ export const getCatalogThunk = () => {
         CatalogAPI.getCatalog().then(response => {
             dispatch(setCatalogAC(response.data))
         }).finally(() => {
-            dispatch(setIsCatalogFetchingAC(true))
+            dispatch(setIsCatalogFetchingAC(false))
         })
     }
 }

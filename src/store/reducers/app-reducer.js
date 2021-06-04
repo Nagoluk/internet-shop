@@ -1,26 +1,21 @@
 import {Locales} from '../../localization/locales';
+import {fromJS} from 'immutable';
 
 const SET_THEME = 'SET_THEME'
 const SET_LANG = 'SET_LANG'
 
-const initState = {
+const initState = fromJS({
     theme: 'light',
     lang: Locales.ENGLISH
-}
+})
 
 const appReducer = (state = initState, action) =>{
     switch(action.type){
         case SET_THEME:
-            return {
-                ...state,
-                theme: action.payload
-            }
+            return state.set('theme', action.payload)
 
         case SET_LANG:
-            return {
-                ...state,
-                lang: action.payload
-            }
+            return state.set('lang', action.payload)
 
         default: return state
 

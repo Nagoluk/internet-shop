@@ -1,2 +1,2 @@
-export const getTheme = (state) => (state.app.theme)
-export const getLang = (state) => (state.app.lang)
+export const getTheme = (state) => (state.app.get('theme'))
+export const getLang = (state) => (state.app.get('lang'))

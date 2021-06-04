@@ -34,6 +34,7 @@ export const OrderButton = styled(Button)`
 `
 
 const BasketItem = React.memo( ({_id, name, logo, price, amount, dispatch}) => {
+    console.log('<<<<<<<<<<<<<<<<<<<<<<<<Render<<<<<<<<<<<<<<<<<<<<<<')
     return <BasketItemStyled>
             <img src={logo} alt={name}/>
             <h3>{name}</h3>
@@ -61,8 +62,8 @@ export const Basket = () => {
                 <BasketWrap>
                 {basketList.map(item => <BasketItem key={item._id} {...item} dispatch={dispatch}/>)}
 
-                {basketList.length === 0 && <NavLink to={'/'}><p><FormattedMessage id={'goToCatalog'}/></p></NavLink>}
-                {basketList.length !== 0 && <NavLink to={'/order'}><OrderButton><FormattedMessage id={'makeOrder'}/></OrderButton></NavLink>}
+                {basketList.size === 0 && <NavLink to={'/'}><p><FormattedMessage id={'goToCatalog'}/></p></NavLink>}
+                {basketList.size !== 0 && <NavLink to={'/order'}><OrderButton><FormattedMessage id={'makeOrder'}/></OrderButton></NavLink>}
                 </BasketWrap>
             </>
     );

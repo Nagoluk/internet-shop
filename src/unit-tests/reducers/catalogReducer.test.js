@@ -1,9 +1,10 @@
 import catalogReducer, {setCatalogAC} from '../../store/reducers/catalog';
+import {fromJS} from 'immutable';
 
-const state = {
+const state = fromJS({
     items: [],
     isCatalogFetching: false,
-}
+})
 
 
 it('Items should setted to catalog', ()=> {
@@ -15,6 +16,6 @@ it('Items should setted to catalog', ()=> {
     }])
     let newState = catalogReducer(state, action)
 
-    expect(newState.items.length).toBe(1)
+    expect(newState.get('items').size).toBe(1)
 })
 

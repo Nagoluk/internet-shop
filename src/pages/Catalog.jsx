@@ -40,6 +40,7 @@ const ToBasket = styled.div`
 `
 
 const GoodItem = React.memo(({_id, name, logo, price, dispatch}) => {
+    console.log('<<<<<<<<<<<<<<<<<<<<<<<<Render<<<<<<<<<<<<<<<<<<<<<<')
     return <Good>
                 <img src={logo} alt={name}/>
                 <div>
