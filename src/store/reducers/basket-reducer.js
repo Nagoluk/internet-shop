@@ -46,7 +46,7 @@ const basketReducer = (state = initState, action) =>{
             return state.update('items', () => action.payload.basket)
 
         case SET_REDIRECT_TO_FINISH:
-            return state.update('redirectToFinish', redirectToFinish => action.payload)
+            return state.update('redirectToFinish', () => action.payload)
 
         default: return state
     }

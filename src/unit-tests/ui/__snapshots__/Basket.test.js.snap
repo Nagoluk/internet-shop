@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Basket/> matches snapshot 1`] = `
+<div>
+  <header
+    class="sc-bdnxRM kODaaW"
+  >
+    <div
+      class="sc-gtsrHT bkbeeT"
+    >
+      <select
+        name="lang"
+      >
+        <option
+          value="en-us"
+        >
+          en
+        </option>
+        <option
+          value="uk-UA"
+        >
+          ua
+        </option>
+      </select>
+      <select
+        name="theme"
+      >
+        <option
+          value="dark"
+        >
+          dark
+        </option>
+        <option
+          value="light"
+        >
+          light
+        </option>
+      </select>
+      <h1>
+        Basket
+      </h1>
+    </div>
+    <div
+      class="sc-gtsrHT sc-dlnjwi bkbeeT jFMDrI"
+    >
+      <h3>
+        Total
+        : 
+        0
+         $
+      </h3>
+    </div>
+  </header>
+  <div
+    class="sc-fujyAs dTPaHF"
+  >
+    <a
+      aria-current="page"
+      class="active"
+      href="/"
+    >
+      <p>
+        Go to catalog
+      </p>
+    </a>
+  </div>
+</div>
+`;

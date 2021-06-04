@@ -5,20 +5,67 @@ import App from './App';
 
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
-import {Provider} from 'react-redux';
+import {Provider, useSelector} from 'react-redux';
 import store from './store/store';
+import LangProvider from './localization/provider';
+import {createGlobalStyle, ThemeProvider} from 'styled-components';
+import {getLang, getTheme} from './store/selectors/app-selector';
+
+const themes = {
+    dark: {
+        primary: '#2b5278',
+        backgroundForComponents: 'rgb(43, 43, 43)',
+        background: 'rgb(60, 63, 65)',
+        text: '#fff'
+    },
+
+    light: {
+        primary: '#2b5278',
+        backgroundForComponents: '#fff',
+        background: 'lightgray',
+        text: '#000'
+    }
+}
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: ${props => props.theme.background};
+    color: ${props => props.theme.text};
+  }
+`
+
+const StoreAndReactRouterProviders = ({children}) => {
+    return <BrowserRouter>
+                <Provider store={store}>
+                    {children}
+                </Provider>
+           </BrowserRouter>
+}
+
+const ThemeAndLocalizationProvider = ({children}) => {
+    const theme = useSelector(getTheme)
+    const lang = useSelector(getLang)
+
+    return <ThemeProvider theme={themes[theme]}>
+                <GlobalStyle/>
+                <LangProvider locale={lang}>
+                    {children}
+                </LangProvider>
+            </ThemeProvider>
+
+}
 
 
-ReactDOM.render(
-      <BrowserRouter>
-          <Provider store={store}>
-              <App />
-          </Provider>
-      </BrowserRouter>,
-  document.getElementById('root')
-);
+export const UniversalProvider = ({children}) => {
+    return <StoreAndReactRouterProviders>
+                <ThemeAndLocalizationProvider>
+                    {children}
+                </ThemeAndLocalizationProvider>
+            </StoreAndReactRouterProviders>
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
+ReactDOM.render(<UniversalProvider><App/></UniversalProvider>,
+    document.getElementById('root') || document.createElement('div')) ;// for testing purposes )
+
 reportWebVitals();

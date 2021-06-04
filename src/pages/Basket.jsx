@@ -34,7 +34,6 @@ export const OrderButton = styled(Button)`
 `
 
 const BasketItem = React.memo( ({_id, name, logo, price, amount, dispatch}) => {
-    console.log('<<<<<<<<<<<<<<<<<<<<<<<<Render<<<<<<<<<<<<<<<<<<<<<<')
     return <BasketItemStyled>
             <img src={logo} alt={name}/>
             <h3>{name}</h3>

@@ -16,6 +16,6 @@ it('Items should setted to catalog', ()=> {
     }])
     let newState = catalogReducer(state, action)
 
-    expect(newState.get('items').size).toBe(1)
+    expect(newState.get('items').length).toBe(1)
 })
 
