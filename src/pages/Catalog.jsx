@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {getGoods} from '../store/selectors/catalog-selector';
+import {getCatalogFetching, getGoods} from '../store/selectors/catalog-selector';
 import {PageHeader} from '../components/pageHeader';
 import styled from 'styled-components'
 import {getCatalogThunk} from '../store/reducers/catalog';
@@ -57,6 +57,7 @@ const GoodItem = React.memo(({_id, name, logo, price, dispatch}) => {
 
 export const Catalog = () => {
     const goods = useSelector(getGoods)
+    const isFetch = useSelector(getCatalogFetching)
     const dispatch = useDispatch()
 
 
@@ -70,9 +71,12 @@ export const Catalog = () => {
                         <NavLink to={'basket'}><FormattedMessage id={'basket'}/></NavLink>
                     </ToBasket>
                 </PageHeader>
+                {!isFetch &&
                 <GoodsWrap>
                     {goods.map(good => <GoodItem key={good._id} {...good} dispatch={dispatch}/>)}
-                </GoodsWrap>
+                </GoodsWrap>}
+
+                {isFetch && <div>Fetching catalog....</div>}
             </>);
 };
 

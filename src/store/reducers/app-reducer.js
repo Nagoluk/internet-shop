@@ -1,28 +1,26 @@
 import {Locales} from '../../localization/locales';
 import {fromJS} from 'immutable';
+import {handleActions, createActions} from 'redux-actions';
 
-const SET_THEME = 'SET_THEME'
-const SET_LANG = 'SET_LANG'
 
-const initState = fromJS({
+const defaultState = fromJS({
     theme: 'light',
     lang: Locales.ENGLISH
 })
 
-const appReducer = (state = initState, action) =>{
-    switch(action.type){
-        case SET_THEME:
-            return state.set('theme', action.payload)
+export const {setLang, setTheme} = createActions({
+    SET_LANG: (lang) => ({lang}),
+    SET_THEME: (theme) => ({theme})
+});
 
-        case SET_LANG:
-            return state.set('lang', action.payload)
+export const appReducer = handleActions(
+    {
+        [setLang]: (state, {payload: {lang}}) => state.set('lang', lang),
+        [setTheme]: (state, {payload: {theme}}) => state.set('theme', theme)
+    },
 
-        default: return state
+    defaultState
+);
+  
 
-    }
-}
 
-export const setThemeAC = (theme) => ({type: SET_THEME, payload: theme})
-export const setLangAC = (lang) => ({type: SET_LANG, payload: lang})
-
-export default appReducer

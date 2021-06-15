@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import {useDispatch, useSelector} from 'react-redux';
-import {setLangAC, setThemeAC} from '../store/reducers/app-reducer';
+import {setLang, setTheme} from '../store/reducers/app-reducer';
 import {getLang, getTheme} from '../store/selectors/app-selector';
 import {Locales} from '../localization/locales';
 
@@ -34,14 +34,14 @@ export const PageHeader = ({title, children}) => {
         <Header>
             <LeftSide>
                 <select name="lang" value={lang} onChange={(event => {
-                    dispatch(setLangAC(event.target.value))
+                    dispatch(setLang(event.target.value))
                 })}>
                     <option value={Locales.ENGLISH}>en</option>
                     <option value={Locales.UKRAINIAN}>ua</option>
                 </select>
 
                 <select name="theme" value={theme} onChange={(event => {
-                    dispatch(setThemeAC(event.target.value))
+                    dispatch(setTheme(event.target.value))
                 })}>
                     <option value="dark">dark</option>
                     <option value="light">light</option>

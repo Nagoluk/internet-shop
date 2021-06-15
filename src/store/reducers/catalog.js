@@ -1,38 +1,35 @@
 import {CatalogAPI} from '../../api/catalog-api';
 import {fromJS} from 'immutable';
+import { createActions, handleActions } from 'redux-actions';
 
-const SET_CATALOG = 'SET_CATALOG'
-const SET_IS_CATALOG_FETCHING = 'SET_IS_CATALOG_FETCHING'
 
-const initState = fromJS({
+const defaultState = fromJS({
     items: [],
     isCatalogFetching: false,
 })
 
+export const {setCatalog, setIsCatalogFetching} = createActions({
+    SET_CATALOG: (catalog) => ({catalog}),
+    SET_IS_CATALOG_FETCHING: (payload) => payload
+});
 
-const catalogReducer = (state = initState, action) =>{
-    switch(action.type){
-        case SET_CATALOG:
-            return state.update('items', () => action.payload.catalog)
+export const catalogReducer = handleActions(
+    {
+        [setCatalog]: (state, {payload: {catalog}}) => state.update('items', () => catalog),
+        [setIsCatalogFetching]: (state, {payload}) => state.update('isCatalogFetching', () => payload)
+    },
 
-        case SET_IS_CATALOG_FETCHING:
-            return state.update('isCatalogFetching', () => action.payload)
-
-        default: return state
-
-    }
-}
-
-export const setCatalogAC = (catalog) => ({type: SET_CATALOG, payload: {catalog}})
-export const setIsCatalogFetchingAC = (payload) => ({type: SET_IS_CATALOG_FETCHING, payload})
+    defaultState
+);
+  
 
 export const getCatalogThunk = () => {
     return (dispatch) => {
-        dispatch(setIsCatalogFetchingAC(true))
+        dispatch(setIsCatalogFetching(true))
         CatalogAPI.getCatalog().then(response => {
-            dispatch(setCatalogAC(response.data))
+            dispatch(setCatalog(response.data))
         }).finally(() => {
-            dispatch(setIsCatalogFetchingAC(false))
+            dispatch(setIsCatalogFetching(false))
         })
     }
 }
