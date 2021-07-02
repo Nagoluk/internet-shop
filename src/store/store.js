@@ -5,6 +5,8 @@ import catalogReducer from './reducers/catalog';
 import {appReducer} from './reducers/app-reducer';
 import basketReducer from './reducers/basket-reducer';
 import {reducer as formReducer} from 'redux-form';
+import promise from 'redux-promise-middleware'
+
 
 
 let reducers = combineReducers({
@@ -16,6 +18,6 @@ let reducers = combineReducers({
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleWare)));
+const store = createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleWare, promise)));
 
 export default store;
